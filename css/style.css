@@ -25,6 +25,10 @@ body{
     border: none;
     background-color: #69B5F1;
 }
+.entry button:hover{
+    cursor: pointer;
+    background-color: #2082cc;
+}
 .entry input{
     display: inline-block;
     padding: 13px 30px 13px 20px;
