@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="entry">
+        <input placeholder="What will you do today?" [(ngModel)] = "item_value">
+        <button (click)="addItem()">ADD</button>
+    </div>
+    <p id="error" [ngStyle] = "{display: check_value ? 'block' : 'none'}">Sorry! Enter some task First</p>
+</div>

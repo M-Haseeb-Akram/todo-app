@@ -1,0 +1,21 @@
+
+.items{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 17px 10px 17px 15px;    
+    background-color: white;
+    color: gray;
+    width: 75%;
+    border: 8px solid #A56FF1;
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    background-color: #8650EE;
+    align-items: center;
+}

@@ -1,0 +1,8 @@
+<div>
+    <div class="todo">
+        <input type="checkbox" [checked] = "status" (change) = "sendTaskforUpdate()">
+        <span [ngStyle] = "{textDecoration: status ? 'line-through' : 'none' }">{{ title }}</span>
+        <i class="fa fa-trash" (click) = sendTask()></i>
+    </div>
+    <hr /> 
+</div>

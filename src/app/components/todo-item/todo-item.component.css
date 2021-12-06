@@ -1,0 +1,27 @@
+.todo{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: row wrap; */
+    /* align-items: stretch; */
+}
+
+.todo input[type='checkbox']{
+    margin-right: 15px;
+    
+}
+.todo input[type='checkbox']:hover{
+    cursor: pointer;
+}
+.todo span{
+    width: 91%;
+    font-size: 17px;
+    word-break: break-all;
+}
+.todo i{
+    margin-left: 5px;
+    
+}
+.todo i:hover{
+    cursor: pointer;
+    color: rgb(73, 72, 72);
+}
