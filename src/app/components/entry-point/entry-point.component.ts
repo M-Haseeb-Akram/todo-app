@@ -20,9 +20,9 @@ export class EntryPointComponent implements OnInit {
   addItem = () => {
     if(this.item_value.length === 0){
       this.check_value = true;
-      setTimeout( () => {this.check_value = false;}, 3000)
     }
     else{
+      this.check_value = false;
       this.itemDetail.emit(this.item_value);
     }
     this.item_value = "";

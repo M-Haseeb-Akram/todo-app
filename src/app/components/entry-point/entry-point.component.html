@@ -3,5 +3,9 @@
         <input placeholder="What will you do today?" [(ngModel)] = "item_value">
         <button (click)="addItem()">ADD</button>
     </div>
-    <p id="error" [ngStyle] = "{display: check_value ? 'block' : 'none'}">Sorry! Enter some task First</p>
+    <div class="alert alert-danger mt-2"
+    role="alert"
+    [ngStyle] = "{display: item_value.length !== 0 || !check_value ? 'none' : 'block'}">
+       Sorry! Enter some task First—check it out!
+      </div>
 </div>
