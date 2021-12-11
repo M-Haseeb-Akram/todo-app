@@ -19,8 +19,16 @@ export class EntryPointComponent implements OnInit {
   }
 
   addTodoItem = () => {
-    let letters_allowed = /^[0-9a-zA-Z]+$/;
-    if(this.item_value.length === 0){
+    this.checkforErrors();
+    if(!this.check_value){
+      this.itemDetail.emit(this.item_value);
+      this.item_value = "";
+    } 
+    
+  }
+  checkforErrors = () => {
+    let letters_allowed = /^[0-9a-zA-Z_ ]+$/;
+    if(this.item_value.trim().length === 0){
       this.check_value = true;
       this.error_message = "Sorry! Enter some task First—check it out!";
     }
@@ -30,12 +38,9 @@ export class EntryPointComponent implements OnInit {
     }
     else{
       this.check_value = false;
-      this.itemDetail.emit(this.item_value);
-      this.item_value = "";
+      this.error_message = "";
     }
-    
   }
-
   ActionByKeys = (event: KeyboardEvent) => {
     const name = event.key;
     if(name === 'Enter'){
