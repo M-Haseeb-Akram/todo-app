@@ -41,6 +41,12 @@
     font-size: 15px;
     font-weight: normal;
 } 
-#error{
-    color: rgba(182, 13, 13, 0.856); 
-}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+  }

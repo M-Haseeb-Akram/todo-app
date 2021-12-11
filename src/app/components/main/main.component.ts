@@ -1,3 +1,4 @@
+import { TodoValues } from './../../models/todo.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,25 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  items: {title: string, status: boolean}[] = []
+  list_todo_items: TodoValues[] = []
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onItemAdded = (title: string) => {
-    this.items.push({
+    this.list_todo_items.push({
       title: title,
       status: false
     });
   }
 
-  onItemDel = (index: number) => {
-    this.items.splice(index, 1);
+  onItemDelete = (index: number) => {
+    this.list_todo_items.splice(index, 1);
   }
 
   onItemUpdate = (index: number) => {
 
-    this.items[index].status === true ? this.items[index].status = false : this.items[index].status = true;
+    this.list_todo_items[index].status === true ? this.list_todo_items[index].status = false : this.list_todo_items[index].status = true;
   }
 }

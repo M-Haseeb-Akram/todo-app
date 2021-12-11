@@ -3,13 +3,12 @@
     <div class="container">
     
     <div class="items">
-        <p *ngIf="items.length === 0; else list">Nothing on your todo List</p>
+        <p *ngIf="list_todo_items.length === 0; else list">Nothing on your todo List</p>
         <ng-template #list>
-            <app-todo-item *ngFor = "let list_item of items; let index = index;"
-             [title] = "list_item.title" 
-             [status] = "list_item.status" 
+            <app-todo-item *ngFor = "let list_item of list_todo_items; let index = index;"
+             [todo_value] = "list_item" 
              [id] = "index"
-             (sendId) = "onItemDel($event)"
+             (sendId) = "onItemDelete($event)"
              (sendTaskId) = "onItemUpdate($event)">
             </app-todo-item>
         </ng-template>  

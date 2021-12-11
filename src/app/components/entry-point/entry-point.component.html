@@ -1,11 +1,10 @@
 <div class="container">
     <div class="entry">
         <input placeholder="What will you do today?" [(ngModel)] = "item_value">
-        <button (click)="addItem()">ADD</button>
+        <button (click)="addTodoItem()">ADD</button>
     </div>
-    <div class="alert alert-danger mt-2"
-    role="alert"
-    [ngStyle] = "{display: item_value.length !== 0 || !check_value ? 'none' : 'block'}">
-       Sorry! Enter some task First—check it out!
+    <div class="alert mt-2"
+    [ngStyle] = "{display: !check_value ? 'none' : 'block'}">
+       {{ error_message }}
       </div>
 </div>

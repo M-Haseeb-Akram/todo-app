@@ -1,3 +1,4 @@
+import { TodoValues } from './../../models/todo.model';
 import { Component, OnInit, Input, Output , EventEmitter} from '@angular/core';
 
 @Component({
@@ -6,10 +7,8 @@ import { Component, OnInit, Input, Output , EventEmitter} from '@angular/core';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-
-  @Input() status: boolean = false;
-  @Input() title: string = "";
-  @Input() id: number = 0;
+  @Input() todo_value: TodoValues = {title:"", status: false};
+  @Input() id: number = -1;
   @Output() sendId: EventEmitter<number> = new EventEmitter();
   @Output() sendTaskId: EventEmitter<number> = new EventEmitter();
 
@@ -18,11 +17,11 @@ export class TodoItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sendTask = () => {
+  sendTaskIdforDelete = () => {
     this.sendId.emit(this.id);
   }
 
-  sendTaskforUpdate = () => {
+  sendTaskIdforUpdate = () => {
     this.sendTaskId.emit(this.id);
   }
 }

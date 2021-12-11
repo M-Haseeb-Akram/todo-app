@@ -1,8 +1,8 @@
 <div>
     <div class="todo">
-        <input type="checkbox" [checked] = "status" (change) = "sendTaskforUpdate()">
-        <span [ngStyle] = "{textDecoration: status ? 'line-through' : 'none' }">{{ title }}</span>
-        <i class="fa fa-trash" (click) = sendTask()></i>
+        <input type="checkbox" [checked] = "todo_value.status" (change) = "sendTaskIdforUpdate()">
+        <span [ngStyle] = "{textDecoration: todo_value.status ? 'line-through' : 'none' }">{{ todo_value.title }}</span>
+        <i class="fa fa-trash" (click) = sendTaskIdforDelete()></i>
     </div>
     <hr /> 
 </div>
